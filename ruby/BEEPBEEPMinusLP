@@ -1,0 +1,43 @@
+def print_with_delay(sentences, delay)
+    sentences.each do |sentence|
+      puts sentence
+      sleep(delay) # Pause for the specified delay
+    end
+  end
+  
+  def display_ascii_art(art, times, delay)
+    times.times do
+      puts art
+      sleep(delay) # Delay between each print
+    end
+  end
+  
+  def main
+    sentences = [
+      "You are midlane...",
+      "You are playing AP Master Yi against the AD veigar",
+      "You are even with your laner....",
+      "Uh oh...",
+      "What is that you hear??",
+      "Uh oh.........",
+      "GANKED BY NUNU WITH 1200 AP",
+      "You explode..."
+    ]
+    
+    puts "BEEEEP BEEEEEEEEEP"
+    print_with_delay(sentences, 1)
+  
+    minus_lp = <<-ART
+      ──────▄▌▐▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▌
+      ───▄▄██▌█ BEEP BEEP
+      ▄▄▄▌▐██▌█ -15 LP DELIVERY
+      ███████▌█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▌
+      ▀(⊙)▀▀▀▀▀▀▀(⊙)(⊙)▀▀▀▀▀▀▀▀▀▀(⊙
+    ART
+  
+    display_ascii_art(minus_lp, 5, 0.6) # Print ASCII art 5 times with a 0.1-second delay
+  end
+  
+  # Start the program
+  main
+  
